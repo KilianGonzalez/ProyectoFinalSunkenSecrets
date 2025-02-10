@@ -47,3 +47,6 @@ TagManager:
   - name: adelante
     uniqueID: 4067687207
     locked: 0
+  - name: animales
+    uniqueID: 1070769935
+    locked: 0
