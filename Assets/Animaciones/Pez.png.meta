@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b42b64761eeab6e4785b5bf16e973618
+guid: 610b8e2b2205b0941b49efa1e9ba6542
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,85 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alga2 animada_0
+      name: Pez_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 102
-        width: 20
-        height: 25
+        x: 2
+        y: 21
+        width: 57
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7876987dcd1f5e468e525c814b04ca0
-      internalID: 1001994715
+      spriteID: 91b991bc0e215df4284e8f448b1b74c3
+      internalID: 1209422271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alga2 animada_1
+      name: Pez_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 102
-        width: 20
-        height: 25
+        x: 69
+        y: 21
+        width: 57
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cced515635617eb46a78d945951474e6
-      internalID: 1147440760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alga2 animada_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 102
-        width: 20
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5b2f5e56f9e29b43b0d92cdaeb8d577
-      internalID: -1721176384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alga2 animada_3
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 102
-        width: 20
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b772c99a48f190846b82981399699a27
-      internalID: -1301794260
+      spriteID: cf70be4f20307904c953bad3996d75de
+      internalID: 1785581691
       vertices: []
       indices: 
       edges: []
@@ -191,10 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Alga2 animada_0: 1001994715
-      Alga2 animada_1: 1147440760
-      Alga2 animada_2: -1721176384
-      Alga2 animada_3: -1301794260
+      Pez_0: 1209422271
+      Pez_1: 1785581691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
