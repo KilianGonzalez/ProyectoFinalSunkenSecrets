@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: atras
+    uniqueID: 2270884857
+    locked: 0
+  - name: adelante
+    uniqueID: 4067687207
+    locked: 0
+  - name: Paredes Grises
+    uniqueID: 3280622865
+    locked: 0
+  - name: animales
+    uniqueID: 1070769935
+    locked: 0
