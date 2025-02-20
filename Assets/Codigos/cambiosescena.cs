@@ -24,4 +24,9 @@ public class cambiosescena : MonoBehaviour
     {
         SceneManager.LoadScene("Enemigos");
     }
+
+    public void Salir() 
+    {
+        Application.Quit();
+    }
 }
