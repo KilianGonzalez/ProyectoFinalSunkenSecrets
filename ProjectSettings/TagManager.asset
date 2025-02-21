@@ -50,6 +50,9 @@ TagManager:
   - name: Paredes Grises
     uniqueID: 3280622865
     locked: 0
+  - name: buzo
+    uniqueID: 2641729269
+    locked: 0
   - name: animales
     uniqueID: 1070769935
     locked: 0

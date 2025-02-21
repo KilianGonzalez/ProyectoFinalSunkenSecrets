@@ -10,18 +10,21 @@ public class MovimientoPlayer : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriterender;
+    private PolygonCollider2D polyCollider;
+    private bool facingRight = true; // Para rastrear la dirección actual
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.drag = waterDrag;
         spriterender = GetComponent<SpriteRenderer>();
+        polyCollider = GetComponent<PolygonCollider2D>();
     }
 
     void Update()
     {
         MoveCharacter();
-        VoltearSprite();
+        VoltearSpriteYCollider();
     }
 
     void MoveCharacter()
@@ -37,16 +40,35 @@ public class MovimientoPlayer : MonoBehaviour
             rb.AddForce(moveDirection * moveForce, ForceMode2D.Force);
         }
     }
-    void VoltearSprite()
+
+    void VoltearSpriteYCollider()
     {
-        if (rb.velocity.x > 0.1f)
+        if (rb.velocity.x > 0.1f && !facingRight)
         {
             spriterender.flipX = false;
+            FlipCollider();
+            facingRight = true;
         }
-        else if (rb.velocity.x < -0.1f)
+        else if (rb.velocity.x < -0.1f && facingRight)
         {
             spriterender.flipX = true;
+            FlipCollider();
+            facingRight = false;
         }
     }
 
+    void FlipCollider()
+    {
+        // Obtener los puntos originales del colisionador
+        Vector2[] points = polyCollider.points;
+
+        // Reflejar los puntos en el eje X
+        for (int i = 0; i < points.Length; i++)
+        {
+            points[i].x *= -1;
+        }
+
+        // Asignar los nuevos puntos al colisionador
+        polyCollider.points = points;
+    }
 }
