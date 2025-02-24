@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class MovimientoPEZ : MonoBehaviour
+public class MovimientoPira√±a : MonoBehaviour
 {
     private Vector3 startPoint;
     private Vector3 endPoint;
-    public float distance = 5f; // Distancia a recorrer / Se cambia cada pez
-    public float speed = 0.2f; // Velocidad m·xima
+    public float distance = 5f; // Distancia a recorrer
+    public float speed = 0.2f; // Velocidad
 
-    private bool movingRight = true; // DirecciÛn del pez
+    private bool movingRight = true; // Direcci√≥n del pez
 
     void Start()
     {
