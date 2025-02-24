@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\e.luaces\Desktop\Proyecto\ProyectoFinalSunkenSecrets
+  m_LastProjectPath: C:\Users\k.gonzalez\Desktop\UnityProjects\ProyectoFinalSunkenSecrets
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -1351,7 +1351,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 138
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
