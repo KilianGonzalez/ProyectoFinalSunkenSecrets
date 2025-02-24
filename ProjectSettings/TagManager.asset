@@ -53,6 +53,9 @@ TagManager:
   - name: buzo
     uniqueID: 2641729269
     locked: 0
+  - name: Algas
+    uniqueID: 2266725381
+    locked: 0
   - name: animales
     uniqueID: 1070769935
     locked: 0

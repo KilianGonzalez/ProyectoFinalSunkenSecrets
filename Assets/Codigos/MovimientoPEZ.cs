@@ -4,8 +4,8 @@ public class MovimientoPEZ : MonoBehaviour
 {
     private Vector3 startPoint;
     private Vector3 endPoint;
-    public float distance = 5f; // Distancia a recorrer
-    public float speed = 0.2f; // Velocidad
+    public float distance = 5f; // Distancia a recorrer / Se cambia cada pez
+    public float speed = 0.2f; // Velocidad máxima
 
     private bool movingRight = true; // Dirección del pez
 
