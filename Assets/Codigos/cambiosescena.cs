@@ -25,6 +25,11 @@ public class cambiosescena : MonoBehaviour
         SceneManager.LoadScene("Enemigos");
     }
 
+    public void CambiarAMenu()
+    {
+        SceneManager.LoadScene("Menú");
+    }
+
     public void Salir() 
     {
         Application.Quit();
