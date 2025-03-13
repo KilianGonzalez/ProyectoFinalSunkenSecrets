@@ -121,12 +121,12 @@ TextureImporter:
       name: Alga2 animada_1
       rect:
         serializedVersion: 2
-        x: 85
+        x: 81
         y: 102
         width: 20
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.68648607, y: 0.5000003}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
