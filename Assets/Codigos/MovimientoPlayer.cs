@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MovimientoPlayer : MonoBehaviour
 {
-    public float moveForce = 5f;   // Fuerza de movimiento
-    public float maxSpeed = 3f;    // Velocidad máxima en el agua
-    public float waterDrag = 1.5f; // Resistencia del agua
+    public float moveForce = 1f;   // Fuerza de movimiento
+    public float maxSpeed = 1f;    // Velocidad máxima en el agua
+    public float waterDrag = 1f; // Resistencia del agua
 
     private Rigidbody2D rb;
     private SpriteRenderer spriterender;
