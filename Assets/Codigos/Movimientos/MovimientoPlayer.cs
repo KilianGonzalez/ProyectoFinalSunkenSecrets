@@ -6,11 +6,10 @@ public class MovimientoPlayer : MonoBehaviour
 {
     public float moveForce = 1f;   // Fuerza de movimiento
     public float maxSpeed = 1f;    // Velocidad máxima en el agua
-    public float waterDrag = 1f; // Resistencia del agua
+    public float waterDrag = 1f;   // Resistencia del agua
 
     private Rigidbody2D rb;
     private SpriteRenderer spriterender;
-    private PolygonCollider2D polyCollider;
     private bool facingRight = true; // Para rastrear la dirección actual
 
     void Start()
@@ -18,13 +17,12 @@ public class MovimientoPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.drag = waterDrag;
         spriterender = GetComponent<SpriteRenderer>();
-        polyCollider = GetComponent<PolygonCollider2D>();
     }
 
     void Update()
     {
         MoveCharacter();
-        VoltearSpriteYCollider();
+        VoltearSprite();
     }
 
     void MoveCharacter()
@@ -41,34 +39,17 @@ public class MovimientoPlayer : MonoBehaviour
         }
     }
 
-    void VoltearSpriteYCollider()
+    void VoltearSprite()
     {
         if (rb.velocity.x > 0.1f && !facingRight)
         {
             spriterender.flipX = false;
-            FlipCollider();
             facingRight = true;
         }
         else if (rb.velocity.x < -0.1f && facingRight)
         {
             spriterender.flipX = true;
-            FlipCollider();
             facingRight = false;
         }
-    }
-
-    void FlipCollider()
-    {
-        // Obtener los puntos originales del colisionador
-        Vector2[] points = polyCollider.points;
-
-        // Reflejar los puntos en el eje X
-        for (int i = 0; i < points.Length; i++)
-        {
-            points[i].x *= -1;
-        }
-
-        // Asignar los nuevos puntos al colisionador
-        polyCollider.points = points;
     }
 }
