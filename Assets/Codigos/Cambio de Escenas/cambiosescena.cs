@@ -34,4 +34,20 @@ public class cambiosescena : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void CambiarANivel2()
+    {
+        SceneManager.LoadScene("Nivel2");
+    }
+
+    public void CambiarANivel1()
+    {
+        SceneManager.LoadScene("Nivel1");
+    }
+
+    public void Presalida()
+    {
+        SceneManager.LoadScene("Presalida");
+    }
+
 }

@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Antesnivel.unity
     guid: afd38118f09f3304fb6254111e67bf2e
   - enabled: 1
@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victoria.unity
     guid: 3dea72eaa8cf317468f42fdf85051dbd
+  - enabled: 1
+    path: Assets/Scenes/Derrota2.unity
+    guid: f3bccd5d92ab8274a8a7c0ad005c51ac
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 63421023bc45f9f4094939f596f9727c
+  - enabled: 1
+    path: Assets/Scenes/Presalida.unity
+    guid: ef091ff8ba633be47b5fec39b56b5712
   m_configObjects: {}
