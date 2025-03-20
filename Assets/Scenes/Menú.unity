@@ -1638,7 +1638,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 424149275}
         m_TargetAssemblyTypeName: cambiosescena, Assembly-CSharp
-        m_MethodName: Salir
+        m_MethodName: Presalida
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
