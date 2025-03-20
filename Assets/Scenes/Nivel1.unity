@@ -42222,7 +42222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7468576619454294879, guid: fa0581e254137b842b4b2bd905199c85, type: 3}
       propertyPath: speed
-      value: 0.6
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7468576619454294879, guid: fa0581e254137b842b4b2bd905199c85, type: 3}
       propertyPath: distance
