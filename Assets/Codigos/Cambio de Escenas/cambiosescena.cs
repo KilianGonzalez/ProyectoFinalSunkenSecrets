@@ -31,7 +31,7 @@ public class cambiosescena : MonoBehaviour
     }
 
     public void Salir() 
-    {
+    {   
         Application.Quit();
     }
 
