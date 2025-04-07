@@ -59,3 +59,9 @@ TagManager:
   - name: animales
     uniqueID: 1070769935
     locked: 0
+  - name: muros
+    uniqueID: 2915656599
+    locked: 0
+  - name: paredes sobre muro
+    uniqueID: 3229296399
+    locked: 0
