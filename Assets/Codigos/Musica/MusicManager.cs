@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager Instance;
+
     public AudioClip menuMusic;
     public AudioClip level1Music;
 
@@ -18,9 +20,13 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
+        Instance = this;
         DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        float guardarVolumen = PlayerPrefs.GetFloat("gameVolume", 0.5f);
+        SetVolume(guardarVolumen);
     }
 
     void Start()
@@ -98,5 +104,16 @@ public class MusicManager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.loop = false;
         audioSource.Play();
+    }
+
+    public void SetVolume(float value)
+    {
+        audioSource.volume = value;
+        PlayerPrefs.SetFloat("gameVolume", value);
+    }
+
+    public float GetVolume()
+    {
+        return audioSource.volume;
     }
 }
