@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Presalida.unity
     guid: ef091ff8ba633be47b5fec39b56b5712
+  - enabled: 1
+    path: Assets/Scenes/Victory2.unity
+    guid: c3a3f124a892bf144bc49035793479d9
   m_configObjects: {}

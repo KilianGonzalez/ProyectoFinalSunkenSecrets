@@ -54,11 +54,26 @@ public class BarraOxigeno : MonoBehaviour
             }
         }
 
-        // Si el oxígeno llega a 0, cambiar de escena
+        // Si el oxígeno llega a 0, cambiar de escena dependiendo del nivel
         if (oxigenoActual <= 0)
+        {
+            CambiarEscenaDerrota();
+        }
+    }
+
+    private void CambiarEscenaDerrota()
+    {
+        string escenaActual = SceneManager.GetActiveScene().name;
+
+        if (escenaActual == "Nivel1")
         {
             SceneManager.LoadScene("Derrota");
         }
+        else if (escenaActual == "Nivel2")
+        {
+            SceneManager.LoadScene("Derrota2");
+        }
+        
     }
 
     IEnumerator OscurecerPantalla(float duracion)
