@@ -27,10 +27,23 @@ public class HealthSystem : MonoBehaviour
 
         UpdateHealthBar();
 
-        // Si la vida llega a 0, cambiar de escena
         if (currentHealth <= 0)
         {
+            CambiarEscenaDerrota();
+        }
+    }
+
+    private void CambiarEscenaDerrota()
+    {
+        string escenaActual = SceneManager.GetActiveScene().name;
+
+        if (escenaActual == "Nivel1")
+        {
             SceneManager.LoadScene("Derrota");
+        }
+        else if (escenaActual == "Nivel2")
+        {
+            SceneManager.LoadScene("Derrota2");
         }
     }
 
