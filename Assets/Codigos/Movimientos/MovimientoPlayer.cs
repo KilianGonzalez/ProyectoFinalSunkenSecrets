@@ -10,6 +10,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriterender;
+    private PolygonCollider2D polyCollider;
     private bool facingRight = true; // Para rastrear la dirección actual
 
     void Start()
@@ -17,6 +18,7 @@ public class MovimientoPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.drag = waterDrag;
         spriterender = GetComponent<SpriteRenderer>();
+        polyCollider = GetComponent<PolygonCollider2D>();
     }
 
     void Update()
@@ -45,11 +47,25 @@ public class MovimientoPlayer : MonoBehaviour
         {
             spriterender.flipX = false;
             facingRight = true;
+            FlipCollider(false); // Vuelve al estado original
         }
         else if (rb.velocity.x < -0.1f && facingRight)
         {
             spriterender.flipX = true;
             facingRight = false;
+            FlipCollider(true); // Invierte el collider
         }
+    }
+
+    void FlipCollider(bool invertir)
+    {
+        if (polyCollider == null) return;
+
+        Vector2[] puntos = polyCollider.points;
+        for (int i = 0; i < puntos.Length; i++)
+        {
+            puntos[i].x *= -1;
+        }
+        polyCollider.points = puntos;
     }
 }
