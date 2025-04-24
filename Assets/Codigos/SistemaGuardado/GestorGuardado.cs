@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Security.Cryptography;
-using System.text;
+using System.Text;
 using System;
 
 public class GestorGuardado
@@ -53,12 +53,12 @@ public class GestorGuardado
     {
         using (Aes aes = Aes.Create())
         {
-            aes.Key = Enconding.UTF8.GetBytes(clave);
+            aes.Key = Encoding.UTF8.GetBytes(clave);
             aes.IV = Encoding.UTF8.GetBytes(iv);
 
             using var cifrador = aes.CreateEncryptor();
             using var ms = new MemoryStream();
-            using var cs = new CryptoStream(ms, cifrador, CrytoStreamMode.Write);
+            using var cs = new CryptoStream(ms, cifrador, CryptoStreamMode.Write);
             using var sw = new StreamWriter(cs);
 
             sw.Write(textoPlano);
@@ -75,7 +75,7 @@ public class GestorGuardado
             aes.Key = Encoding.UTF8.GetBytes(clave);
             aes.IV = Encoding.UTF8.GetBytes(iv);
 
-            using var descifrador = aes.Create.Decryptor();
+            using var descifrador = aes.CreateDecryptor();
             using var ms = new MemoryStream(Convert.FromBase64String(textoCifrado));
             using var cs = new CryptoStream(ms, descifrador, CryptoStreamMode.Read);
             using var sr = new StreamReader(cs);

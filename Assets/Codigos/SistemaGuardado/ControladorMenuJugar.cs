@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagment;
+using UnityEngine.SceneManagement;
 using TMPro;
 using TMPro.Examples;
 
@@ -37,11 +37,11 @@ public class ControladorMenuJugar : MonoBehaviour
         {
             if (!GestorGuardado.ExistePartida(ranura))
             {
-                DatosPartida datos = new DatosPartida();
+                DatosPartida datos = new DatosPartida()
                 {
-                    nombrePartida = nombre;
+                    nombrePartida = nombre,
                     fechaCreacion = System.DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
-                    escenaGuardada = "Prenivel";
+                    escenaGuardada = "Prenivel"
                 };
 
                 GestorGuardado.GuardarPartida(datos, ranura);
