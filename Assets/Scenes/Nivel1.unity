@@ -25794,7 +25794,7 @@ MonoBehaviour:
   superficieY: 40
   profundidadMaxima: -10
   intensidadMaxima: 1
-  intensidadMinima: 0.2
+  intensidadMinima: 0.05
 --- !u!114 &860633554
 MonoBehaviour:
   m_ObjectHideFlags: 0
