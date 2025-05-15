@@ -4068,7 +4068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campoNombrePartida: {fileID: 2134726417}
-  desplegableRanuras: {fileID: 2139425911}
+  desplegableCargar: {fileID: 2139425911}
+  desplegableBorrar: {fileID: 306375947}
   panelNueva: {fileID: 2030360361}
   panelCargar: {fileID: 1945738923}
   panelBorrar: {fileID: 1801493965}

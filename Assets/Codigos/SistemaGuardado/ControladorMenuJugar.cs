@@ -1,26 +1,36 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using TMPro.Examples;
 
 public class ControladorMenuJugar : MonoBehaviour
 {
     public TMP_InputField campoNombrePartida;
-    public TMP_Dropdown desplegableRanuras;
+    public TMP_Dropdown desplegableCargar;
+    public TMP_Dropdown desplegableBorrar;
     public GameObject panelNueva;
     public GameObject panelCargar;
     public GameObject panelBorrar;
 
     private void Start()
     {
-        ActualizarDesplegable();
+        ActualizarDesplegableCargar();
+        ActualizarDesplegableBorrar();
     }
 
     public void MostrarPanelNueva() => panelNueva.SetActive(true);
-    public void MostrarPanelCargar() => panelCargar.SetActive(true);
-    public void MostrarPanelBorrar() => panelBorrar.SetActive(true);
 
-    //Cancelar borrado
+    public void MostrarPanelCargar()
+    {
+        ActualizarDesplegableCargar();
+        panelCargar.SetActive(true);
+    }
+
+    public void MostrarPanelBorrar()
+    {
+        ActualizarDesplegableBorrar();
+        panelBorrar.SetActive(true);
+    }
+
     public void Cancelar()
     {
         panelNueva.SetActive(false);
@@ -50,12 +60,12 @@ public class ControladorMenuJugar : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("Todas las ranuras ocupadas.");
+        Debug.LogWarning("Todas las ranuras están ocupadas.");
     }
 
     public void CargarPartidaSeleccionada()
     {
-        string ranura = ObtenerRanuraSeleccionada();
+        string ranura = ObtenerRanuraSeleccionada(desplegableCargar);
         if (!GestorGuardado.ExistePartida(ranura)) return;
 
         DatosPartida datos = GestorGuardado.CargarPartida(ranura);
@@ -64,22 +74,23 @@ public class ControladorMenuJugar : MonoBehaviour
 
     public void BorrarPartidaSeleccionada()
     {
-        string ranura = ObtenerRanuraSeleccionada();
+        string ranura = ObtenerRanuraSeleccionada(desplegableBorrar);
         if (GestorGuardado.ExistePartida(ranura))
             GestorGuardado.BorrarPartida(ranura);
 
-        ActualizarDesplegable();
+        ActualizarDesplegableCargar();
+        ActualizarDesplegableBorrar();
     }
 
-    private string ObtenerRanuraSeleccionada()
+    private string ObtenerRanuraSeleccionada(TMP_Dropdown dropdown)
     {
-        int indice = desplegableRanuras.value;
+        int indice = dropdown.value;
         return GestorGuardado.ObtenerRanuras()[indice];
     }
 
-    private void ActualizarDesplegable()
+    private void ActualizarDesplegableCargar()
     {
-        desplegableRanuras.ClearOptions();
+        desplegableCargar.ClearOptions();
         var opciones = new System.Collections.Generic.List<string>();
 
         foreach (var ranura in GestorGuardado.ObtenerRanuras())
@@ -95,6 +106,27 @@ public class ControladorMenuJugar : MonoBehaviour
             }
         }
 
-        desplegableRanuras.AddOptions(opciones);
+        desplegableCargar.AddOptions(opciones);
+    }
+
+    private void ActualizarDesplegableBorrar()
+    {
+        desplegableBorrar.ClearOptions();
+        var opciones = new System.Collections.Generic.List<string>();
+
+        foreach (var ranura in GestorGuardado.ObtenerRanuras())
+        {
+            if (GestorGuardado.ExistePartida(ranura))
+            {
+                DatosPartida datos = GestorGuardado.CargarPartida(ranura);
+                opciones.Add($"{datos.nombrePartida} - {datos.escenaGuardada}");
+            }
+            else
+            {
+                opciones.Add("Vacía");
+            }
+        }
+
+        desplegableBorrar.AddOptions(opciones);
     }
 }
