@@ -6,9 +6,22 @@ using System;
 
 public class GestorGuardado
 {
-    private static string carpetaGuardado => Application.persistentDataPath + "/Partidas";
+    private static string carpetaGuardado => Application.persistentDataPath;
     private static readonly string clave = "SubmarinoTesoroClave1234567890";
     private static string iv = "vectorinicial16b";
+
+    private static string ranuraActiva;
+
+
+    public static void EstablecerRanuraActiva(string ranura)
+    {
+        ranuraActiva = ranura;
+    }
+
+    public static string ObtenerRanuraActiva()
+    {
+        return ranuraActiva;
+    }
 
     private static byte[] ObtenerClave()
     {

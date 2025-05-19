@@ -10,6 +10,7 @@ public class ControladorMenuJugar : MonoBehaviour
     public GameObject panelNueva;
     public GameObject panelCargar;
     public GameObject panelBorrar;
+    public GameObject panelRanuras;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class ControladorMenuJugar : MonoBehaviour
         panelNueva.SetActive(false);
         panelCargar.SetActive(false);
         panelBorrar.SetActive(false);
+        panelRanuras.SetActive(false);
     }
 
     public void CrearPartidaNueva()
@@ -55,12 +57,14 @@ public class ControladorMenuJugar : MonoBehaviour
                 };
 
                 GestorGuardado.GuardarPartida(datos, ranura);
+                GestorGuardado.EstablecerRanuraActiva(ranura);
                 SceneManager.LoadScene("Prenivel");
                 return;
             }
         }
 
-        Debug.LogWarning("Todas las ranuras están ocupadas.");
+        panelNueva.SetActive(false);
+        panelRanuras.SetActive(true);
     }
 
     public void CargarPartidaSeleccionada()
@@ -69,6 +73,7 @@ public class ControladorMenuJugar : MonoBehaviour
         if (!GestorGuardado.ExistePartida(ranura)) return;
 
         DatosPartida datos = GestorGuardado.CargarPartida(ranura);
+        GestorGuardado.EstablecerRanuraActiva(ranura);
         SceneManager.LoadScene(datos.escenaGuardada);
     }
 

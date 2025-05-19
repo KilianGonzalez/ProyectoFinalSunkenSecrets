@@ -1,9 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GestorPersistente : MonoBehaviour
 {
     private static GestorPersistente instancia;
+ 
+
+    private readonly HashSet<string> escenasValidas = new HashSet<string>
+    {
+        "Prenivel",
+        "Nivel1",
+        "Nivel2"
+    };
 
     private void Awake()
     {
@@ -20,31 +29,32 @@ public class GestorPersistente : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        GuardarEscenaActual();
+        GuardarEscenaActualSiEsValida();
     }
 
     private void OnDestroy()
     {
-        GuardarEscenaActual();
+        GuardarEscenaActualSiEsValida();
     }
 
-    private void GuardarEscenaActual()
+    private void GuardarEscenaActualSiEsValida()
     {
         string escenaActual = SceneManager.GetActiveScene().name;
 
-        foreach (string ranura in GestorGuardado.ObtenerRanuras())
+        if (!escenasValidas.Contains(escenaActual)) return;
+
+        string ranuraActiva = GestorGuardado.ObtenerRanuraActiva();
+        if (string.IsNullOrEmpty(ranuraActiva)) return;
+
+        if (GestorGuardado.ExistePartida(ranuraActiva))
         {
-            if (GestorGuardado.ExistePartida(ranura))
+            DatosPartida datos = GestorGuardado.CargarPartida(ranuraActiva);
+            if (datos.escenaGuardada != escenaActual)
             {
-                DatosPartida datos = GestorGuardado.CargarPartida(ranura);
-                if (datos.escenaGuardada != escenaActual)
-                {
-                    datos.escenaGuardada = escenaActual;
-                    GestorGuardado.GuardarPartida(datos, ranura);
-                }
+                datos.escenaGuardada = escenaActual;
+                GestorGuardado.GuardarPartida(datos, ranuraActiva);
+                Debug.Log("Guardada escena en ranura activa: " + ranuraActiva);
             }
         }
-
-        Debug.Log("Guardado automático de escena: " + escenaActual);
     }
 }
