@@ -6,9 +6,55 @@ using System;
 
 public class GestorGuardado
 {
-    private static string carpetaGuardado => Application.persistentDataPath + "/Partidas";
-    private static string clave = "clave_segura_de_32_bytes_1234567890abcd";
-    private static string iv = "vector_inicial_16b";
+    private static string carpetaGuardado => Application.persistentDataPath;
+    private static readonly string clave = "SubmarinoTesoroClave1234567890";
+    private static string iv = "vectorinicial16b";
+
+    private static string ranuraActiva;
+
+
+    public static void EstablecerRanuraActiva(string ranura)
+    {
+        ranuraActiva = ranura;
+    }
+
+    public static string ObtenerRanuraActiva()
+    {
+        return ranuraActiva;
+    }
+
+    private static byte[] ObtenerClave()
+    {
+        // Convierte el string en bytes usando UTF8
+        byte[] claveBytes = Encoding.UTF8.GetBytes(clave);
+
+        // Si no tiene 32 bytes exactos, la ajustamos
+        if (claveBytes.Length != 32)
+        {
+            // Opcional: Puedes usar un hash como SHA256 para asegurarte de que la clave sea siempre de 32 bytes
+            using (var sha = SHA256.Create())
+            {
+                return sha.ComputeHash(Encoding.UTF8.GetBytes(clave));
+            }
+        }
+
+        return claveBytes;
+    }
+
+    private static byte[] ObtenerIV()
+    {
+        // Convierte el string en bytes usando UTF8
+        byte[] ivBytes = Encoding.UTF8.GetBytes(iv);
+
+        // Si no tiene 16 bytes exactos, la ajustamos
+        if (ivBytes.Length != 16)
+        {
+            throw new Exception("El IV debe tener exactamente 16 bytes.");
+        }
+
+        return ivBytes;
+    }
+
 
     public static void GuardarPartida(DatosPartida datos, string ranura)
     {
@@ -53,8 +99,8 @@ public class GestorGuardado
     {
         using (Aes aes = Aes.Create())
         {
-            aes.Key = Encoding.UTF8.GetBytes(clave);
-            aes.IV = Encoding.UTF8.GetBytes(iv);
+            aes.Key = ObtenerClave(); // Usamos la clave ajustada
+            aes.IV = ObtenerIV(); // Usamos el IV ajustado
 
             using var cifrador = aes.CreateEncryptor();
             using var ms = new MemoryStream();
@@ -72,8 +118,8 @@ public class GestorGuardado
     {
         using (Aes aes = Aes.Create())
         {
-            aes.Key = Encoding.UTF8.GetBytes(clave);
-            aes.IV = Encoding.UTF8.GetBytes(iv);
+            aes.Key = ObtenerClave(); // Usamos la clave ajustada
+            aes.IV = ObtenerIV(); // Usamos el IV ajustado
 
             using var descifrador = aes.CreateDecryptor();
             using var ms = new MemoryStream(Convert.FromBase64String(textoCifrado));
