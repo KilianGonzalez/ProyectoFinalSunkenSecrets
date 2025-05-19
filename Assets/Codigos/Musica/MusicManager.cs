@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
 
     public AudioClip menuMusic;
     public AudioClip level1Music;
+    public AudioClip level2Music;
 
     private AudioSource audioSource;
     private string currentScene = "";
@@ -60,6 +61,13 @@ public class MusicManager : MonoBehaviour
             if (audioSource.clip != level1Music || !audioSource.isPlaying)
             {
                 PlayLoopMusic(level1Music);
+            }
+        }
+        else if (sceneName == "Nivel2")
+        {
+            if (audioSource.clip != level2Music || !audioSource.isPlaying)
+            {
+                PlayLoopMusic(level2Music);
             }
         }
         else
