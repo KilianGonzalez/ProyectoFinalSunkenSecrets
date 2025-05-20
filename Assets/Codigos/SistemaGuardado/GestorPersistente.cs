@@ -4,18 +4,19 @@ using System.Collections.Generic;
 
 public class GestorPersistente : MonoBehaviour
 {
-    private static GestorPersistente instancia;
- 
+    public static GestorPersistente instancia;
 
-    private readonly HashSet<string> escenasValidas = new HashSet<string>
+    private string escenaActual;
+    private string escenaAnterior;
+
+    private static readonly HashSet<string> escenasValidas = new()
     {
-        "Prenivel",
-        "Nivel1",
-        "Nivel2"
+        "Prenivel", "Nivel1", "Nivel2"
     };
 
     private void Awake()
     {
+        // Singleton
         if (instancia == null)
         {
             instancia = this;
@@ -27,34 +28,37 @@ public class GestorPersistente : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    private void OnEnable()
     {
-        GuardarEscenaActualSiEsValida();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        GuardarEscenaActualSiEsValida();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void GuardarEscenaActualSiEsValida()
+    private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
-        string escenaActual = SceneManager.GetActiveScene().name;
+        escenaAnterior = escenaActual;
+        escenaActual = escena.name;
+    }
 
-        if (!escenasValidas.Contains(escenaActual)) return;
+    // Devuelve el nombre de la escena anterior.
+    public static string ObtenerEscenaAnterior()
+    {
+        return instancia.escenaAnterior;
+    }
 
-        string ranuraActiva = GestorGuardado.ObtenerRanuraActiva();
-        if (string.IsNullOrEmpty(ranuraActiva)) return;
+    // Devuelve el nombre de la escena actual.
+    public static string ObtenerEscenaActual()
+    {
+        return instancia.escenaActual;
+    }
 
-        if (GestorGuardado.ExistePartida(ranuraActiva))
-        {
-            DatosPartida datos = GestorGuardado.CargarPartida(ranuraActiva);
-            if (datos.escenaGuardada != escenaActual)
-            {
-                datos.escenaGuardada = escenaActual;
-                GestorGuardado.GuardarPartida(datos, ranuraActiva);
-                Debug.Log("Guardada escena en ranura activa: " + ranuraActiva);
-            }
-        }
+    // Devuelve true si la escena es válida para guardado (Prenivel, Nivel1, Nivel2).
+    public static bool EsEscenaValida(string escena)
+    {
+        return escenasValidas.Contains(escena);
     }
 }
