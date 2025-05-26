@@ -8,6 +8,9 @@ public class MusicManager : MonoBehaviour
 
     public AudioClip menuMusic;
     public AudioClip level1Music;
+    public AudioClip level2Music;
+    public AudioClip loseMusic;
+    public AudioClip victoryMusic;
 
     private AudioSource audioSource;
     private string currentScene = "";
@@ -62,6 +65,27 @@ public class MusicManager : MonoBehaviour
                 PlayLoopMusic(level1Music);
             }
         }
+        else if (sceneName == "Nivel2")
+        {
+            if (audioSource.clip != level2Music || !audioSource.isPlaying)
+            {
+                PlayLoopMusic(level2Music);
+            }
+        }
+        else if (sceneName == "Derrota" || sceneName == "Derrota2")
+        {
+            if (audioSource.clip != loseMusic || !audioSource.isPlaying)
+            {
+                PlayLoopMusic(loseMusic);
+            }
+        }
+        else if (sceneName == "Victoria" || sceneName == "Victory2")
+        {
+            if (audioSource.clip != victoryMusic || !audioSource.isPlaying)
+            {
+                PlayLoopMusic(victoryMusic);
+            }
+        }
         else
         {
             audioSource.Stop();
@@ -75,7 +99,8 @@ public class MusicManager : MonoBehaviour
                sceneName == "Opciones" ||
                sceneName == "Enemigos" ||
                sceneName == "Tutorial" ||
-               sceneName == "Jugar";
+               sceneName == "Jugar" ||
+               sceneName == "Presalida";
     }
 
     IEnumerator PlayMenuMusicWithDelay()

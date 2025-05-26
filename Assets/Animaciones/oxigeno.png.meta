@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: aca019391b7448e43952b02a1f0de3b2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oxigeno_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 43
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa72450127f102e42ad3aff630e0ae23
+      internalID: -1387026576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oxigeno_47
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 43
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7759736f1bea046939263ac4ea21e4
+      internalID: 1348721059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oxigeno_48
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 43
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b821939ce21fc454f998d540be268f9e
+      internalID: -137834655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oxigeno_49
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 43
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de21be7c21cdc94ab9587e892ffafcb
+      internalID: -1882951785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      oxigeno_0: -1145735880
+      oxigeno_1: 1928824093
+      oxigeno_10: 1456278296
+      oxigeno_11: 1710685714
+      oxigeno_12: 554648524
+      oxigeno_13: 1684351127
+      oxigeno_14: 1458276973
+      oxigeno_15: -1268333739
+      oxigeno_16: 1806069469
+      oxigeno_17: 1606692504
+      oxigeno_18: 1576272777
+      oxigeno_19: 1853285249
+      oxigeno_2: 2002595259
+      oxigeno_20: -1547789896
+      oxigeno_21: -483326232
+      oxigeno_22: 1179110756
+      oxigeno_23: -2103674994
+      oxigeno_24: -576487760
+      oxigeno_25: 927752951
+      oxigeno_26: 2029377267
+      oxigeno_27: -2072718260
+      oxigeno_28: -467854410
+      oxigeno_29: 146142326
+      oxigeno_3: 1263057810
+      oxigeno_30: 898796537
+      oxigeno_31: -232388642
+      oxigeno_32: -1229307189
+      oxigeno_33: 973901829
+      oxigeno_34: 166276300
+      oxigeno_35: -1477497401
+      oxigeno_36: -2010141206
+      oxigeno_37: -302269832
+      oxigeno_38: -890623889
+      oxigeno_39: 1086666444
+      oxigeno_4: -1481063402
+      oxigeno_40: 71953313
+      oxigeno_41: -1506990587
+      oxigeno_42: -141014228
+      oxigeno_43: -1495822875
+      oxigeno_44: -995263452
+      oxigeno_45: 1766289069
+      oxigeno_46: -1387026576
+      oxigeno_47: 1348721059
+      oxigeno_48: -137834655
+      oxigeno_49: -1882951785
+      oxigeno_5: 1024631601
+      oxigeno_6: -177029036
+      oxigeno_7: 1630218415
+      oxigeno_8: 1944565449
+      oxigeno_9: -246940645
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1a8733c3f0f310642b00a26665ed1a55
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - linterna: {instanceID: 0}
+  - bateria100: {instanceID: 0}
+  - bateria66: {instanceID: 0}
+  - bateria33: {instanceID: 0}
+  - bateria0: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
