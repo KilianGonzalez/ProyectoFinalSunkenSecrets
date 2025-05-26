@@ -26,7 +26,11 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 44378
+=======
+  controlID: 278
+>>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -150,7 +154,11 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 44379
+=======
+  controlID: 279
+>>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -562,9 +570,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 256.83395, y: -36.747208, z: -1.4476892}
     speed: 2
     m_Value: {x: 256.83395, y: -36.747208, z: -1.4476892}
+=======
+    m_Target: {x: -36.11514, y: 25.281954, z: -0.32473356}
+    speed: 2
+    m_Value: {x: 1585.4053, y: 254.88902, z: -3.017654}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -614,9 +628,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< Updated upstream
     m_Target: 149.17514
     speed: 2
     m_Value: 149.17514
+=======
+    m_Target: 31.338972
+    speed: 2
+    m_Value: 393.1909
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1002,7 +1022,11 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 44401
+=======
+  controlID: 301
+>>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1066,10 +1090,17 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< Updated upstream
       scrollPos: {x: 0, y: 40}
       m_SelectedIDs: a6790000
       m_LastClickedID: 31142
       m_ExpandedIDs: 4628feffd84efeff5e72ffff5696fffff4f7ffff1afbffff387600001a770000447b0000167d0000007e0000947e0000
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: fe7e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: b4b6ffffa0c0ffffc2ccffffe0cdffffecd2ffff40deffffe0e8ffff6af9ffffe27d00001482000092840000d4840000548b000038a80000dcb400009cb70000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1224,7 +1255,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< Updated upstream
     - Assets/Objetos
+=======
+    - Assets/Scenes
+>>>>>>> Stashed changes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1232,16 +1267,26 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< Updated upstream
   - Assets/Objetos
+=======
+  - Assets/Scenes
+>>>>>>> Stashed changes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\e.luaces\Desktop\Proyecto\ProyectoFinalSunkenSecrets
+  m_LastProjectPath: C:\Users\k.gonzalez\Desktop\UnityProjects\ProyectoFinalSunkenSecrets
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 76730000
     m_LastClickedID: 29558
     m_ExpandedIDs: 00000000187300001a7300001c7300001e7300002073000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 6a730000
+    m_LastClickedID: 29546
+    m_ExpandedIDs: 000000002a73000000ca9a3bffffff7f
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1269,7 +1314,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000187300001a7300001c7300001e7300002073000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 000000002a73000000ca9a3bffffff7f
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1294,9 +1343,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< Updated upstream
     m_SelectedInstanceIDs: a6790000
     m_LastClickedInstanceID: 31142
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_SelectedInstanceIDs: fe7e0000
+    m_LastClickedInstanceID: 32510
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> Stashed changes
     m_ExpandedInstanceIDs: 16620000c4650000b06100009c610000fa6b0000da640000bc690000447100007870000000000000908600001481000052d1000054e200005ee30000da810000987300008a9c00008ea40000a0080400
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1321,7 +1376,11 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
+<<<<<<< Updated upstream
     m_ScrollPosition: {x: 0, y: 660}
+=======
+    m_ScrollPosition: {x: 0, y: 0}
+>>>>>>> Stashed changes
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 187
