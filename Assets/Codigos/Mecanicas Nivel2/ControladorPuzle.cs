@@ -11,26 +11,38 @@ public class PuzzleNumero : MonoBehaviour
     public GameObject objetoADestruir;
 
     private int valorActual = 0;
-    private static PuzzleNumero[] todasLasRuedas;
+    private PuzzleNumero[] todasLasRuedas;
 
-    void Start()
+    void Start()        
     {
         if (spritesNumeros.Length != 10)
             Debug.LogError("¡Faltan sprites de número!");
 
         imagenNumero.sprite = spritesNumeros[valorActual];
 
-        if (todasLasRuedas == null)
-            todasLasRuedas = FindObjectsOfType<PuzzleNumero>();
+        
+        todasLasRuedas = FindObjectsOfType<PuzzleNumero>();
+
+        if (jugador == null)
+            jugador = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         mensajeInteractuar.SetActive(false);
     }
 
     void Update()
     {
+        if (jugador == null)
+        {
+            GameObject nuevoJugador = GameObject.FindGameObjectWithTag("Player");
+            if (nuevoJugador != null)
+                jugador = nuevoJugador.transform;
+            else
+                return;
+        }
+
+
         float distancia = Vector2.Distance(transform.position, jugador.position);
 
-        // Mostrar mensaje solo si esta es la más cercana
         if (EsLaRuedaMasCercana() && distancia <= distanciaInteraccion)
         {
             mensajeInteractuar.SetActive(true);
@@ -50,11 +62,16 @@ public class PuzzleNumero : MonoBehaviour
 
     bool EsLaRuedaMasCercana()
     {
+        if (jugador == null || todasLasRuedas == null)
+            return false;
+
         PuzzleNumero masCercana = null;
         float menorDistancia = Mathf.Infinity;
 
         foreach (var rueda in todasLasRuedas)
         {
+            if (rueda == null) continue; // <-- Esto evita el error
+
             float dist = Vector2.Distance(rueda.transform.position, jugador.position);
             if (dist < menorDistancia)
             {
@@ -70,6 +87,9 @@ public class PuzzleNumero : MonoBehaviour
     {
         foreach (var rueda in todasLasRuedas)
         {
+
+            if (rueda == null) continue;
+
             if (rueda.valorActual != rueda.valorCorrecto)
                 return;
         }

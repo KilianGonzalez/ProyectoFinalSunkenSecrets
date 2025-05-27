@@ -19080,7 +19080,7 @@ Transform:
   m_GameObject: {fileID: 1046679632}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -163.25, y: -32.717, z: 0.044001475}
+  m_LocalPosition: {x: -53.36, y: -35.84, z: 0.044001475}
   m_LocalScale: {x: 0.78787, y: 0.78787, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22748,7 +22748,7 @@ MonoBehaviour:
   imagenNumero: {fileID: 1297253882}
   distanciaInteraccion: 2
   jugador: {fileID: 1046679633}
-  objetoADestruir: {fileID: 0}
+  objetoADestruir: {fileID: 1407550217}
 --- !u!212 &1297253882
 SpriteRenderer:
   m_ObjectHideFlags: 0
